@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./UserPage/component/Navbar";
@@ -35,7 +35,7 @@ import ProviderProfile from "./ProviderPage/pages/ProviderProfile";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
 
         <Route
@@ -257,6 +257,6 @@ export default function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
