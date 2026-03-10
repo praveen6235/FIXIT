@@ -33,7 +33,7 @@ export default function Painting() {
           <div className="col-md-4 mb-4" key={painter._id}>
             <div className="card shadow service-card">
               <img
-                src={`http://localhost:5000/uploads/${painter.image}`}
+                src={`https://fixit-ce61.onrender.com/uploads/${painter.image}`}
                 alt={painter.name}
                 className="card-img-top"
                 style={{ height: "180px", objectFit: "cover" }}

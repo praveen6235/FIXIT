@@ -52,7 +52,7 @@ export default function Services() {
           <div className="col-md-3 mb-4" key={p._id}>
             <div className="card service-card shadow-sm h-100">
               <img
-                src={`http://localhost:5000/uploads/${p.image}`}
+                src={`https://fixit-ce61.onrender.com/uploads/${p.image}`}
                 className="card-img-top"
                 style={{ height: "160px", objectFit: "cover" }}
                 alt={p.name}

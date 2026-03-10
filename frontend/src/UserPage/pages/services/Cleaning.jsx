@@ -34,7 +34,7 @@ export default function Cleaning() {
           <div className="col-md-4 mb-4" key={cleaner._id}>
             <div className="card shadow service-card">
               <img
-                src={`http://localhost:5000/uploads/${cleaner.image}`}
+                src={`https://fixit-ce61.onrender.com/uploads/${cleaner.image}`}
                 alt={cleaner.name}
                 className="card-img-top"
                 style={{ height: "180px", objectFit: "cover" }}

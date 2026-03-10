@@ -36,7 +36,7 @@ export default function Plumbing() {
             <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={plumber._id}>
               <div className="card shadow border-0 service-card h-100">
                 <img
-                  src={`http://localhost:5000/uploads/${plumber.image}`}
+                  src={`https://fixit-ce61.onrender.com/uploads/${plumber.image}`}
                   className="card-img-top"
                   style={{
                     height: "200px",

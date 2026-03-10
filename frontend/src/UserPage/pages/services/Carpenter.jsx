@@ -34,7 +34,7 @@ export default function Carpenter() {
           <div className="col-md-4 mb-4" key={carpenter._id}>
             <div className="card shadow service-card">
               <img
-                src={`http://localhost:5000/uploads/${carpenter.image}`}
+                src={`https://fixit-ce61.onrender.com/uploads/${carpenter.image}`}
                 alt={carpenter.name}
                 style={{ height: "180px", objectFit: "cover" }}
                 className="card-img-top"

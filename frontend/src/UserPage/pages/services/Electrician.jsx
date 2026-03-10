@@ -40,7 +40,7 @@ export default function Electrical() {
             >
               <div className="card shadow border-0 service-card h-100">
                 <img
-                  src={`http://localhost:5000/uploads/${electrician.image}`}
+                  src={`https://fixit-ce61.onrender.com/uploads/${electrician.image}`}
                   className="card-img-top"
                   style={{
                     height: "200px",
