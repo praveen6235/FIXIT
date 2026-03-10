@@ -1,0 +1,152 @@
+body{
+background: linear-gradient(135deg, #0F5C6E, #1A7F95, #F5F7FA);
+min-height:100vh;
+font-family:'Poppins',sans-serif;
+color:#333;
+}
+
+.navbar{
+color: white;
+transition: 0.3s ease;
+}
+
+.navbar-brand{
+color: rgb(167, 223, 106) !important;
+font-weight: bold;
+font-size: 22px;
+}
+
+.nav-link{
+color: white !important;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.nav-link:hover{
+color: rgb(183, 203, 103) !important;  
+}
+
+
+.container .home{
+  background-color: #088395;
+}
+
+.dropdown-menu{
+background: rgba(9, 7, 7, 0.9);
+border: none;
+border-radius: 8px;
+}
+
+.container .card{
+  background-color: #52c6d8;;
+}
+
+.navbar .dropdown-item{
+color: black;
+text-align: center;
+transition: 0.3s;
+}
+
+.dropdown-item:hover{
+background: transparent;
+color: #d1941b; 
+}
+
+.service-card{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover{
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background-color: #f8f9fa;
+}
+
+
+
+.app-wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content{
+  flex: 1;
+}
+
+.card{
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+  padding-left: 5px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin-right: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+.btn-primary{
+background: #A7A195;
+border: none;
+color: white;
+}
+
+.btn-primary:hover{
+background: #8f897f;
+}
+
+.btn-dark{
+background: #1F2228;
+border: none;
+}
+
+.btn-dark:hover{
+background: #000;
+}
+.service-card{
+transition:0.3s;
+cursor:pointer;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.table-wrapper{
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+background:white;
+}
+
+.table tbody tr:hover{
+background:#f7f7f7;
+transition:0.3s;
+}
