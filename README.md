@@ -11,6 +11,12 @@ This project is built using the **MERN Stack (MongoDB, Express.js, React.js, Nod
 # ScreenShots
 # Home 
 ![Home](images/home.png)
+# Services
+![Services](images/services.png)
+# About
+![About](images/about.png)
+# Login
+![Login](images/login.png)
 
 # Live Deployment
 
