@@ -43,7 +43,7 @@ export default function ProviderProfile() {
           <div className="row align-items-center">
             <div className="col-md-4 text-center">
               <img
-                src={`http://localhost:5000/uploads/${provider.image}`}
+                src={`https://fixit-ce61.onrender.com/uploads/${provider.image}`}
                 alt="profile"
                 className="rounded-circle shadow"
                 style={{
