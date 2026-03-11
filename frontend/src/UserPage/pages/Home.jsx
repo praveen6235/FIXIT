@@ -21,7 +21,7 @@ export default function Home() {
                   onClick={() => navigate("/services/plumbing")}
                 >
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                    src="https://wallpapers.com/images/hd/plumbing-service-icon-itdl7awjnld09u0r.jpg"
                     width="40"
                     alt="plumbing"
                   />
