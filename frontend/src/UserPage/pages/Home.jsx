@@ -34,7 +34,7 @@ export default function Home() {
                   onClick={() => navigate("/services/electrician")}
                 >
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/1048/1048940.png"
+                    src="https://cdn-icons-png.flaticon.com/512/9781/9781419.png"
                     width="40"
                     alt="electrician"
                   />
@@ -47,7 +47,7 @@ export default function Home() {
                   onClick={() => navigate("/services/carpenter")}
                 >
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
+                    src="https://cdn-icons-png.flaticon.com/512/1270/1270411.png"
                     width="40"
                     alt="carpenter"
                   />
@@ -60,11 +60,11 @@ export default function Home() {
                   onClick={() => navigate("/services/painting")}
                 >
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/995/995053.png"
+                    src="https://cdn1.iconfinder.com/data/icons/education-1-15/151/42-512.png"
                     width="40"
                     alt="ac repair"
                   />
-                  <p className="mt-2 small">AC Repair</p>
+                  <p className="mt-2 small">Painting</p>
                 </div>
               </div>
               <div className="col-6 mb-3">
@@ -73,7 +73,7 @@ export default function Home() {
                   onClick={() => navigate("/services/cleaning")}
                 >
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/4257/4257483.png"
+                    src="https://masterbundles.com/wp-content/uploads/2022/12/cleaning-icon-prev-437.jpg"
                     width="40"
                     alt="cleaning"
                   />
