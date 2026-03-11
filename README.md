@@ -11,10 +11,9 @@ This project is built using the **MERN Stack (MongoDB, Express.js, React.js, Nod
 # Live Deployment
 
 Frontend (Vercel)  
-https://your-vercel-url.vercel.app
+https://fixit-nine-delta.vercel.app
 
 Backend (Render)  
-https://fixit-ce61.onrender.com
 
 Database  
 MongoDB Atlas
@@ -44,11 +43,6 @@ MongoDB Atlas
 - Database → MongoDB Atlas
 
 ---
-
-
----
-
-# Features
 
 ## User
 - Register account
