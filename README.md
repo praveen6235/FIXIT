@@ -1,17 +1,89 @@
-# FixIt Service Booking System
+# FIXIT – Service Booking Platform (MERN Stack)
 
-A MERN stack web application where users can book services and providers can manage bookings.
+## Overview
+FIXIT is a full-stack web application that connects users with service providers such as plumbers, electricians, and other home service professionals.  
+Users can register, log in, browse available service providers, and book services.
 
-## Tech Stack
-- MongoDB
-- Express.js
+This project is built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**.
+
+---
+
+# Live Deployment
+
+Frontend (Vercel)  
+https://your-vercel-url.vercel.app
+
+Backend (Render)  
+https://fixit-ce61.onrender.com
+
+Database  
+MongoDB Atlas
+
+---
+
+# Tech Stack
+
+## Frontend
 - React.js
-- Node.js
-- Bootstrap
+- Axios
+- CSS / Bootstrap / Tailwind
 
-## Features
-- User booking system
-- Provider dashboard
-- Admin panel
-- Profile management
-- Secure authentication
+## Backend
+- Node.js
+- Express.js
+- JWT Authentication
+- Multer (image upload)
+
+## Database
+- MongoDB Atlas
+- Mongoose
+
+## Deployment
+- Frontend → Vercel
+- Backend → Render
+- Database → MongoDB Atlas
+
+---
+
+
+---
+
+# Features
+
+## User
+- Register account
+- Login / Logout
+- Browse service providers
+- Book services
+- View bookings
+
+## Provider
+- Create provider profile
+- Upload service images
+- Manage service details
+
+## Admin
+- Manage users
+- Manage providers
+- Manage bookings
+
+---
+
+# Authentication
+
+Authentication is implemented using **JWT (JSON Web Tokens)**.
+
+Process:
+
+1. User registers
+2. Password is hashed using bcrypt
+3. Login verifies credentials
+4. JWT token generated
+5. Token used for protected routes
+
+---
+
+# Image Upload
+
+Images are uploaded using **Multer** and stored in:
+
