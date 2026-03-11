@@ -8,6 +8,10 @@ This project is built using the **MERN Stack (MongoDB, Express.js, React.js, Nod
 
 ---
 
+# ScreenShots
+# Home 
+![Home](images/home.png)
+
 # Live Deployment
 
 Frontend (Vercel)  
