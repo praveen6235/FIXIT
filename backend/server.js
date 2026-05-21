@@ -31,6 +31,10 @@ app.use("/provider", provideAuthRoutes);
 // Use PORT from .env (important for Render deployment)
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
