@@ -5,10 +5,10 @@ pipeline {
     stages {
 
         stage('Build Backend') {
-            steps {
-                bat 'docker build -t praveen6235/fixit-backend ./backend'
-            }
-        }
+    steps {
+        sh 'docker build -t fixit-backend ./backend'
+    }
+}
 
         stage('Build Frontend') {
             steps {
