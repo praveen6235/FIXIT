@@ -6,25 +6,13 @@ pipeline {
 
         stage('Build Backend') {
             steps {
-                sh 'docker build -t praveen6235/fixit-backend ./backend'
+                sh 'docker build -t fixit-backend ./backend'
             }
         }
 
         stage('Build Frontend') {
             steps {
-                sh 'docker build -t praveen6235/fixit-frontend ./frontend'
-            }
-        }
-
-        stage('Push Backend') {
-            steps {
-                sh 'docker push praveen6235/fixit-backend'
-            }
-        }
-
-        stage('Push Frontend') {
-            steps {
-                sh 'docker push praveen6235/fixit-frontend'
+                sh 'docker build -t fixit-frontend ./frontend'
             }
         }
 
