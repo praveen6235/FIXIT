@@ -4,14 +4,17 @@ services:
     build: ./backend
     ports:
       - "5000:5000"
-
     environment:
       MONGO_URI: mongodb+srv://praveen:Patty%40%23%2445@cluster0.itzidor.mongodb.net/FIXIT
+    networks:
+      - fixit-network
 
   frontend:
     build: ./frontend
     ports:
       - "3001:80"
+    networks:
+      - fixit-network
 
   prometheus:
     image: prom/prometheus:v2.45.0
@@ -20,6 +23,11 @@ services:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - fixit-network
 
   grafana:
     image: grafana/grafana:latest
@@ -28,6 +36,16 @@ services:
       - "3005:3000"
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboards:/var/lib/grafana/dashboards
+    networks:
+      - fixit-network
+    depends_on:
+      - prometheus
+
+networks:
+  fixit-network:
+    driver: bridge
