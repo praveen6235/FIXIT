@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/database.js";
+import promClient from "prom-client";
 
 import userRoutes from "./routes/userRoutes.js";
 import providerRoutes from "./routes/providerRoutes.js";
@@ -12,6 +13,10 @@ import provideAuthRoutes from "./routes/provideAuthRoutes.js";
 dotenv.config();
 
 const app = express();
+
+// Enable default metrics collection
+const collectDefaultMetrics = promClient.collectDefaultMetrics;
+collectDefaultMetrics({ register: promClient.register });
 
 // Connect to MongoDB
 connectDB();
@@ -33,6 +38,12 @@ const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.send("Backend is running successfully 🚀");
+});
+
+// Metrics endpoint for Prometheus
+app.get("/metrics", async (req, res) => {
+  res.set("Content-Type", promClient.register.contentType);
+  res.end(await promClient.register.metrics());
 });
 
 app.listen(PORT, () => {
