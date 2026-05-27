@@ -4,24 +4,56 @@ pipeline {
 
     stages {
 
+        stage('Clone Repo') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/praveen6235/FIXIT.git'
+            }
+        }
+
         stage('Build Backend') {
             steps {
-                sh 'docker build -t fixit-backend ./backend'
+                sh 'docker build -t praveen6235/fixit-backend:latest ./backend'
+            }
+        }
+
+        stage('Push Backend') {
+            steps {
+                sh 'docker push praveen6235/fixit-backend:latest'
             }
         }
 
         stage('Build Frontend') {
             steps {
-                sh 'docker build -t fixit-frontend ./frontend'
+                sh 'docker build -t praveen6235/fixit-frontend:latest ./frontend'
             }
         }
 
-        stage('Deploy Kubernetes') {
+        stage('Push Frontend') {
             steps {
-                // Copy kubeconfig and replace 127.0.0.1 with Minikube's Docker IP
-                sh 'cp ~/.kube/config ~/.kube/config.jenkins'
-                sh 'sed -i "s|https://127.0.0.1:[0-9]*|https://192.168.49.2:8443|g" ~/.kube/config.jenkins'
-                sh 'kubectl --kubeconfig ~/.kube/config.jenkins apply -f k8s/'
+                sh 'docker push praveen6235/fixit-frontend:latest'
+            }
+        }
+
+        stage('Deploy Containers') {
+            steps {
+
+                sh 'docker rm -f fixit-backend || true'
+                sh 'docker rm -f fixit-frontend || true'
+
+                sh '''
+                docker run -d \
+                  --name fixit-backend \
+                  -p 5000:5000 \
+                  praveen6235/fixit-backend:latest
+                '''
+
+                sh '''
+                docker run -d \
+                  --name fixit-frontend \
+                  -p 3002:80 \
+                  praveen6235/fixit-frontend:latest
+                '''
             }
         }
     }
