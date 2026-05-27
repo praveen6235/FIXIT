@@ -63,7 +63,7 @@ export default function Home() {
                 borderRadius: "22px", padding: "1.6rem", backdropFilter: "blur(20px)",
               }}>
                 <p style={{ color: "#64748b", fontSize: ".78rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "1.1rem" }}>
-                  🔍 &nbsp;What are you looking for?????
+                  🔍 &nbsp;What are you looking for?????????????
                 </p>
                 <div className="row g-2">
                   {SERVICES.map(s => (
