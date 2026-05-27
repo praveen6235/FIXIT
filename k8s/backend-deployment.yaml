@@ -1,5 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: backend-deployment
 
@@ -19,6 +20,7 @@ spec:
       containers:
         - name: backend
           image: praveen6235/fixit-backend:latest
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 5000
