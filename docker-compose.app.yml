@@ -1,0 +1,11 @@
+services:
+
+  backend:
+    image: praveen6235/fixit-backend:latest
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: praveen6235/fixit-frontend:latest
+    ports:
+      - "3001:80"
