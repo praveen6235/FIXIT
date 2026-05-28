@@ -13,7 +13,11 @@ stages {
 
     stage('Build Backend') {
         steps {
-            sh 'docker build -t praveen6235/fixit-backend:latest ./backend'
+            sh '''
+            docker build \
+            --cache-from praveen6235/fixit-backend:latest \
+            -t praveen6235/fixit-backend:latest ./backend
+            '''
         }
     }
 
@@ -40,7 +44,11 @@ stages {
 
     stage('Build Frontend') {
         steps {
-            sh 'docker build -t praveen6235/fixit-frontend:latest ./frontend'
+            sh '''
+            docker build \
+            --cache-from praveen6235/fixit-frontend:latest \
+            -t praveen6235/fixit-frontend:latest ./frontend
+            '''
         }
     }
 
@@ -51,18 +59,36 @@ stages {
     }
 
     stage('Deploy Containers') {
-    steps {
+        steps {
 
-        sh 'docker stop $(docker ps -q) || true'
-        sh 'docker rm $(docker ps -aq) || true'
+            sh 'docker rm -f fixit-backend || true'
+            sh 'docker rm -f fixit-frontend || true'
 
-        sh 'docker compose -f docker-compose.app.yml down || true'
+            sh '''
+            docker run -d \
+            --name fixit-backend \
+            -p 5000:5000 \
+            praveen6235/fixit-backend:latest
+            '''
 
-        sh 'docker compose -f docker-compose.app.yml up -d'
+            sh '''
+            docker run -d \
+            --name fixit-frontend \
+            -p 3001:80 \
+            praveen6235/fixit-frontend:latest
+            '''
+        }
     }
 }
+
+post {
+    success {
+        echo 'CI/CD Pipeline Executed Successfully!'
+    }
+
+    failure {
+        echo 'Pipeline Failed!'
+    }
 }
-
-
 
 }
