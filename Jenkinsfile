@@ -51,12 +51,16 @@ stages {
     }
 
     stage('Deploy Containers') {
-        steps {
+    steps {
 
-            sh 'docker compose -f docker-compose.app.yml down || true'
-            sh 'docker compose -f docker-compose.app.yml up -d'
-        }
+        sh 'docker stop $(docker ps -q) || true'
+        sh 'docker rm $(docker ps -aq) || true'
+
+        sh 'docker compose -f docker-compose.app.yml down || true'
+
+        sh 'docker compose -f docker-compose.app.yml up -d'
     }
+}
 }
 
 
