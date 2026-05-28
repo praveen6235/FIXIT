@@ -67,7 +67,7 @@ stages {
             sh '''
             docker run -d \
             --name fixit-backend \
-            -p 5000:5000 \
+            -p 5001:5000 \
             praveen6235/fixit-backend:latest
             '''
 
