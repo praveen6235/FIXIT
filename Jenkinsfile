@@ -1,6 +1,5 @@
 pipeline {
 
-```
 agent any
 
 stages {
@@ -61,15 +60,6 @@ stages {
     }
 }
 
-post {
-    success {
-        echo 'CI/CD Pipeline Executed Successfully!'
-    }
 
-    failure {
-        echo 'Pipeline Failed!'
-    }
-}
-```
 
 }
