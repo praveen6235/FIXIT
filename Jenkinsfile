@@ -74,7 +74,7 @@ stages {
             sh '''
             docker run -d \
             --name fixit-frontend \
-            -p 3001:80 \
+            -p 3002:80 \
             praveen6235/fixit-frontend:latest
             '''
         }
