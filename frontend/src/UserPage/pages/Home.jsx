@@ -48,7 +48,7 @@ export default function Home() {
 
               {/* Headline */}
               <h1 style={{ fontSize: "clamp(2.1rem,5vw,3.4rem)", fontWeight: 900, lineHeight: 1.12, marginBottom: "1.1rem" }}>
-                Home Services<br />
+                Home Services Services Services<br />
                 <span className="g-text">At Your Doorstep</span>
               </h1>
 
